@@ -1,19 +1,11 @@
-let lists = [[1,4,5],[1,3,4],[2,6]];
-
-let mergeKLists = function(lists) {
-
-  let unsortedArr = lists.reduce((mergeResult, item) => {
-  return mergeResult.concat(item);
-
-  });
-
-  return unsortedArr.sort(compareNumbers)
-
+let user = {
+  name: 'John',
+  age: 30,
+  symbol: Symbol("symbol")
 };
 
-function compareNumbers(a, b) {
-return a - b;
+function count (myObject) {
+  return Object.keys(myObject).length;
 }
 
-
-console.log(mergeKLists(lists));
+alert( count(user) );
